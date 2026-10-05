@@ -46,7 +46,7 @@
           "index.html"
         ],
         "createdAt": "2026-10-05T13:18:26.213Z",
-        "reason": "agent decision: false positive from static var() resolution; with variables inlined the detector reports no low-contrast, and computed styles show cream on red (about 5.7:1) for the red buttons and ghost buttons on the red box"
+        "reason": "agent decision: false positives from the detector reading the 0px hover-underline gradients on nav links and the phone link as backgrounds; browser measurement shows these pairs at 13.4:1 and 5.43:1. Real contrast issues (focus ring on dark surfaces, contact eyebrow 4.3:1) are tracked in the critique, not hidden by this ignore."
       }
     ]
   }
