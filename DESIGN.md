@@ -139,15 +139,15 @@ A signage palette: warm paper, deep ink, barber-pole red and blue, brass.
 - **Label** (Oswald 500-700, 17-21px, tracking 0.06-0.18em, uppercase): Buttons, nav, eyebrows, day names, prices (700).
 
 ### Named Rules
-**The Roman Headline Rule.** Headlines are roman. Italic is reserved for the single accent word, the sign's "Sadoun" and the phone number's emphasis in the contact panel.
+**The Roman Headline Rule.** Headlines are roman. Italic is reserved for the single accent word, the sign's "Torggata 15" and the phone number's emphasis in the contact panel.
 
 **The Real Ø Rule.** Norwegian text must render æ, ø and å in the same face as its neighbours. Barlow Condensed was dropped because its Ø is visibly wider; confirm any label face with the word "LØRDAG" before adopting it.
 
 ## Layout
 
-A single column of full-width bands inside a 1120px container with 16px gutters (32px from 760px up). Bands alternate paper, ink and paper again, then close on a red contact panel. The hero is two columns from 900px (copy 1.35fr, sign 1fr) and stacks on mobile with the copy first. Prices sit in a 0.8fr/1.2fr split on desktop and stack on mobile. Section padding is 64px (mobile) to 96px (desktop).
+A single column of full-width bands inside a 1120px container with 16px gutters (32px from 760px up). Bands alternate paper, ink and paper again, then close on a red contact panel. The header sticks from 760px; below that it is static with the nav on a second row. The hero is two columns from 900px (copy 1.35fr, sign 1fr) and stacks on mobile with the copy first. Prices sit in a 0.8fr/1.2fr split on desktop and stack on mobile. Section padding is 64px (mobile) to 96px (desktop).
 
-On phones a fixed pill call bar sits at the bottom with safe-area padding; it hides from 760px, where the header carries a call button instead. Touch targets are at least 42-56px high.
+Below 900px a fixed pill call bar sits at the bottom with safe-area padding; it slides away while the hero call button or the contact panel is in view, and from 900px the header carries a call button instead. Touch targets are at least 42-56px high.
 
 ## Elevation & Depth
 
@@ -183,10 +183,10 @@ A ticket-cream card with a 2px ink border, 10px radius, 8px 8px hard shadow, and
 An ink board with a doubled brass border. Each row: service name in Fraunces, a dotted brass leader, price in Oswald bold brass-light. Rows are separated by hairlines.
 
 ### Navigation
-Sticky, translucent cream bar with a blurred backdrop and a hairline. Oswald uppercase links (hidden below 760px) with a red underline that grows in on hover; the NO/EN pill toggle stays visible at all widths; the header call button appears from 760px.
+Sticky, translucent cream bar with a blurred backdrop and a hairline. Oswald uppercase links (a second row below 760px) with a red underline that grows in on hover; the NO/EN pill toggle stays visible at all widths; the header call button appears from 900px.
 
 ### The Sign (signature)
-An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 2024", the animated pole, "Sadoun" in Fraunces italic and "BARBERSHOP" in widely tracked Oswald. The pole stripe scrolls at a constant 3.2s loop and stops under reduced motion.
+An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 2024", the animated pole, "Torggata 15" in Fraunces italic and "SKIEN" in widely tracked Oswald. The shop name lives in the header, eyebrow and footer; the sign carries the place. The pole stripe scrolls at a constant 3.2s loop and stops under reduced motion.
 
 ## Do's and Don'ts
 
@@ -194,7 +194,9 @@ An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 
 - **Do** keep the phone number (46 15 91 57) and address one tap or one scroll away on every screen.
 - **Do** use pole red only for calling, visiting and the headline accent word.
 - **Do** keep shadows hard and offset (0 2px / 0 4px / 8px 8px / 0 8px) in ink or deep red.
-- **Do** keep motion short and purposeful: 160ms press, 520ms scroll-in, constant pole spin; respect `prefers-reduced-motion`.
+- **Do** keep motion short and purposeful: 160ms press, 520ms entrance, constant pole spin; respect `prefers-reduced-motion`.
+- **Do** keep above-the-fold content independent of scroll: it enters on load, never behind a scroll observer.
+- **Do** use a cream focus ring on red and ink surfaces; the blue ring is for cream surfaces.
 - **Do** check any new label or heading face against the word "LØRDAG" and the digits 0-9 before adopting it.
 
 ### Don't:
