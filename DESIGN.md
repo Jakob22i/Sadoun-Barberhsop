@@ -95,7 +95,7 @@ Every surface answers one question first: how does a person in Skien reach the s
 - Display serif for headlines and prices-of-things; condensed uppercase labels for wayfinding.
 - Hard, offset shadows and doubled brass rules (printed, tactile) instead of soft blur shadows.
 - Pill buttons that physically press in (scale 0.97).
-- Motion is limited to the pole's constant spin, a short scroll-in, and press feedback.
+- Motion is limited to the pole's constant spin, a short load-in of the hero, and press feedback.
 
 ## Colors
 
@@ -108,7 +108,7 @@ A signage palette: warm paper, deep ink, barber-pole red and blue, brass.
 - **Pole Blue** (#1f3c88): Appears only in barber-pole stripes and as the keyboard focus ring. It never fills a surface.
 
 ### Tertiary
-- **Brass** (#b98a2f) and **Brass Light** (#d9b765): Trim and numerals. Doubled rules around the price card, pole end-caps, the sign's inner rule, price figures on the ink board, the diamond marker by the address.
+- **Brass** (#b98a2f) and **Brass Light** (#d9b765): Trim and numerals. Doubled rules around the price card, pole end-caps, the sign's inner rule, price figures on the ink board.
 
 ### Neutral
 - **Paper Cream** (#f3ead7): Page ground and text on dark boards.
@@ -136,7 +136,7 @@ A signage palette: warm paper, deep ink, barber-pole red and blue, brass.
 - **Headline** (600, clamp(36px, 6vw, 56px), 1.02): Section titles, the contact address.
 - **Title** (500, clamp(20px, 3.4vw, 26px)): Service names and hours figures.
 - **Body** (400, 18px, 1.55): Running copy, capped around 30-34ch for the lede and notes.
-- **Label** (Oswald 500-700, 17-21px, tracking 0.06-0.18em, uppercase): Buttons, nav, eyebrows, day names, prices (700).
+- **Label** (Oswald 500-700, 17-21px, tracking 0.06-0.18em, uppercase): Buttons, nav, day names, prices (700).
 
 ### Named Rules
 **The Roman Headline Rule.** Headlines are roman. Italic is reserved for the single accent word, the sign's "Torggata 15" and the phone number's emphasis in the contact panel.
@@ -186,7 +186,7 @@ An ink board with a doubled brass border. Each row: service name in Fraunces, a 
 Sticky, translucent cream bar with a blurred backdrop and a hairline. Oswald uppercase links (a second row below 760px) with a red underline that grows in on hover; the NO/EN pill toggle stays visible at all widths; the header call button appears from 900px.
 
 ### The Sign (signature)
-An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 2024", the animated pole, "Torggata 15" in Fraunces italic and "SKIEN" in widely tracked Oswald. The shop name lives in the header, eyebrow and footer; the sign carries the place. The pole stripe scrolls at a constant 3.2s loop and stops under reduced motion.
+An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 2024", the animated pole, "Torggata 15" in Fraunces italic and "SKIEN" in widely tracked Oswald. The shop name lives in the header, footer and page title; the sign carries the place. The pole stripe scrolls at a constant 3.2s loop and stops under reduced motion.
 
 ## Do's and Don'ts
 
@@ -194,7 +194,7 @@ An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 
 - **Do** keep the phone number (46 15 91 57) and address one tap or one scroll away on every screen.
 - **Do** use pole red only for calling, visiting and the headline accent word.
 - **Do** keep shadows hard and offset (0 2px / 0 4px / 8px 8px / 0 8px) in ink or deep red.
-- **Do** keep motion short and purposeful: 160ms press, 520ms entrance, constant pole spin; respect `prefers-reduced-motion`.
+- **Do** keep motion short and purposeful: 160ms press, 520ms hero load-in, constant pole spin; respect `prefers-reduced-motion`.
 - **Do** keep above-the-fold content independent of scroll: it enters on load, never behind a scroll observer.
 - **Do** use a cream focus ring on red and ink surfaces; the blue ring is for cream surfaces.
 - **Do** check any new label or heading face against the word "LØRDAG" and the digits 0-9 before adopting it.
@@ -204,4 +204,6 @@ An arched ink board, tilted 1.5 degrees, framed by a brass rule, holding "Siden 
 - **Don't** use Barlow Condensed (wide Ø) or Bodoni Moda (hairlines vanish at small sizes); both were tried and removed.
 - **Don't** add photos, reviews, awards or prices that have not been confirmed; example prices and hours stay clearly replaceable.
 - **Don't** let the red-and-blue stripe become a large pattern or a card background.
+- **Don't** put kicker or eyebrow labels above headings; the heading carries its own weight.
+- **Don't** use unicode glyphs as icons; draw them as inline SVG in one filled style (phone and map pin today).
 - **Don't** use pure white or pure black; stay with paper cream and sign ink.

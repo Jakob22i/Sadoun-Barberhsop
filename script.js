@@ -10,14 +10,14 @@
       'hero.title1': 'Klassisk', 'hero.title2': 'barbering', 'hero.title3': 'i hjertet av Skien.',
       'hero.lede': 'Skarpe klipp, rene linjer og et godt skjegg – gjort med tid og håndverk, midt i Torggata.',
       'hero.cta': 'Ring for time', 'hero.cta2': 'Se priser', 'hero.est': 'Siden 2024', 'hero.walkin': 'Walk-in er velkommen · Menn og gutter',
-      'prices.eyebrow': 'Hva vi tilbyr', 'prices.title': 'Priser',
+      'prices.title': 'Priser',
       'prices.note': 'Priser kan variere – ring oss for å bekrefte.',
       'svc.cut': 'Herreklipp', 'svc.fade': 'Fade / maskinklipp', 'svc.beard': 'Skjeggtrim',
       'svc.combo': 'Klipp + skjegg', 'svc.shave': 'Våtbarbering', 'svc.kids': 'Barneklipp',
-      'hours.eyebrow': 'Velkommen innom', 'hours.title': 'Åpningstider',
+      'hours.title': 'Åpningstider',
       'hours.walkin': 'Ring eller kom innom – vi tar deg imot så fort vi kan.',
       'day.weekdays': 'Mandag – fredag', 'day.sat': 'Lørdag', 'day.sun': 'Søndag', 'day.closed': 'Stengt',
-      'contact.eyebrow': 'Finn oss', 'contact.title': 'Torggata 15, Skien',
+      'contact.title': 'Torggata 15, Skien',
       'contact.call': 'Ring nå', 'contact.map': 'Vis i kart',
       'callbar': 'Ring for time',
       'org': 'Org.nr.', 'aria.nav': 'Hovedmeny',
@@ -32,14 +32,14 @@
       'hero.title1': 'Classic', 'hero.title2': 'barbering', 'hero.title3': 'in the heart of Skien.',
       'hero.lede': 'Sharp cuts, clean lines and a well-kept beard – done with time and craft, right on Torggata.',
       'hero.cta': 'Call to book', 'hero.cta2': 'See prices', 'hero.est': 'Since 2024', 'hero.walkin': 'Walk-ins welcome · Men and boys',
-      'prices.eyebrow': 'What we offer', 'prices.title': 'Prices',
+      'prices.title': 'Prices',
       'prices.note': 'Prices may vary – call us to confirm.',
       'svc.cut': 'Haircut', 'svc.fade': 'Fade / clipper cut', 'svc.beard': 'Beard trim',
       'svc.combo': 'Cut + beard', 'svc.shave': 'Wet shave', 'svc.kids': 'Kids’ cut',
-      'hours.eyebrow': 'Drop by', 'hours.title': 'Opening hours',
+      'hours.title': 'Opening hours',
       'hours.walkin': 'Call or walk in – we’ll see you as soon as we can.',
       'day.weekdays': 'Monday – Friday', 'day.sat': 'Saturday', 'day.sun': 'Sunday', 'day.closed': 'Closed',
-      'contact.eyebrow': 'Find us', 'contact.title': 'Torggata 15, Skien',
+      'contact.title': 'Torggata 15, Skien',
       'contact.call': 'Call now', 'contact.map': 'Open in maps',
       'callbar': 'Call to book',
       'org': 'Org. no.', 'aria.nav': 'Main menu',
@@ -105,18 +105,5 @@
     });
     barIo.observe(heroCta);
     barIo.observe(contact);
-  }
-
-  // Innkomst ved scroll
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px', threshold: 0.05 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('is-in'); });
   }
 })();
