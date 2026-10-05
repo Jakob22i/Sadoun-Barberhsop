@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T13:37:23.020088+00:00",
+  "title": "Design System: Sadoun Barbershop",
+  "extensions": {
+    "colorMeta": {
+      "paper-cream": {
+        "role": "neutral",
+        "displayName": "Paper Cream",
+        "canonical": "#f3ead7",
+        "tonalRamp": [
+          "#100a01",
+          "#272112",
+          "#443c2d",
+          "#625a4a",
+          "#827968",
+          "#a69e8c",
+          "#ccc3b1",
+          "#f3ead7"
+        ]
+      },
+      "ticket-cream": {
+        "role": "neutral",
+        "displayName": "Ticket Cream",
+        "canonical": "#e9dcc0",
+        "tonalRamp": [
+          "#120900",
+          "#2a2009",
+          "#463c24",
+          "#655a41",
+          "#857960",
+          "#a99d83",
+          "#d0c3a7",
+          "#f7eace"
+        ]
+      },
+      "sign-ink": {
+        "role": "neutral",
+        "displayName": "Sign Ink",
+        "canonical": "#16213a",
+        "tonalRamp": [
+          "#030920",
+          "#16213a",
+          "#303d58",
+          "#4d5b78",
+          "#6c7a99",
+          "#8f9ebe",
+          "#b4c4e6",
+          "#e2ebff"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#2a3556",
+        "tonalRamp": [
+          "#030724",
+          "#161f3e",
+          "#303b5d",
+          "#4d597d",
+          "#6c799f",
+          "#8f9dc5",
+          "#b4c3ec",
+          "#e4ebfe"
+        ]
+      },
+      "pole-red": {
+        "role": "primary",
+        "displayName": "Pole Red",
+        "canonical": "#b3262d",
+        "tonalRamp": [
+          "#220000",
+          "#480005",
+          "#760413",
+          "#a81723",
+          "#ce4243",
+          "#f96a66",
+          "#feaba5",
+          "#fee4e2"
+        ]
+      },
+      "pole-red-deep": {
+        "role": "primary",
+        "displayName": "Pole Red Deep",
+        "canonical": "#8f1d23",
+        "tonalRamp": [
+          "#220000",
+          "#470006",
+          "#750915",
+          "#9d2c2f",
+          "#c34f4d",
+          "#ed7570",
+          "#fdaca6",
+          "#ffe4e1"
+        ]
+      },
+      "pole-blue": {
+        "role": "secondary",
+        "displayName": "Pole Blue",
+        "canonical": "#1f3c88",
+        "tonalRamp": [
+          "#01003a",
+          "#03155f",
+          "#1a3681",
+          "#3556a4",
+          "#5377c8",
+          "#769cf0",
+          "#a9c4fc",
+          "#e2ebfe"
+        ]
+      },
+      "brass": {
+        "role": "tertiary",
+        "displayName": "Brass",
+        "canonical": "#b98a2f",
+        "tonalRamp": [
+          "#150800",
+          "#2f1e00",
+          "#513804",
+          "#775404",
+          "#9f7104",
+          "#c5953c",
+          "#ecbb65",
+          "#fee8c3"
+        ]
+      },
+      "brass-light": {
+        "role": "tertiary",
+        "displayName": "Brass Light",
+        "canonical": "#d9b765",
+        "tonalRamp": [
+          "#130900",
+          "#2c2000",
+          "#4e3a00",
+          "#715705",
+          "#96751c",
+          "#bb9a47",
+          "#e2c06e",
+          "#fee9ba"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles and the contact address."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service names and hours figures."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, 30-34ch for lede and notes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav, eyebrows, day names and prices (Oswald, uppercase)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-baseline",
+        "value": "0 2px 0 #8f1d23",
+        "purpose": "Pressed-enamel edge under red buttons."
+      },
+      {
+        "name": "callbar-lip",
+        "value": "0 4px 0 #16213a",
+        "purpose": "Under the sticky mobile call bar."
+      },
+      {
+        "name": "ticket-offset",
+        "value": "8px 8px 0 #16213a",
+        "purpose": "Hours ticket sits like a stamped card."
+      },
+      {
+        "name": "panel-lip",
+        "value": "0 8px 0 #16213a",
+        "purpose": "Under the red contact panel."
+      },
+      {
+        "name": "sign-ambient",
+        "value": "0 22px 40px -18px rgba(22,33,58,.55)",
+        "purpose": "Only soft shadow; the hanging sign."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Press feedback (160ms), scroll-in (520ms) and underline growth (220ms)."
+      },
+      {
+        "name": "pole-spin",
+        "value": "3.2s linear infinite",
+        "purpose": "Constant barber-pole stripe scroll; disabled under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav",
+        "value": "760px"
+      },
+      {
+        "name": "hero",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action: call the shop.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Ring for time · 46 15 91 57</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 28px;border:2px solid transparent;border-radius:999px;background:#b3262d;color:#f3ead7;box-shadow:0 2px 0 #8f1d23;font:600 20px/1.2 Oswald,'Arial Narrow',sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 160ms ease}.ds-btn-primary:hover{background:#8f1d23}.ds-btn-primary:active{transform:scale(.97)}.ds-btn-primary:focus-visible{outline:3px solid #1f3c88;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action beside the call button.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Se priser</a>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 28px;border:2px solid #16213a;border-radius:999px;background:transparent;color:#16213a;font:600 20px/1.2 Oswald,'Arial Narrow',sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 160ms ease,color 160ms ease}.ds-btn-ghost:hover{background:#16213a;color:#f3ead7}.ds-btn-ghost:active{transform:scale(.97)}.ds-btn-ghost:focus-visible{outline:3px solid #1f3c88;outline-offset:3px}"
+    },
+    {
+      "name": "Language Toggle",
+      "kind": "chip",
+      "refersTo": "lang-toggle",
+      "description": "NO/EN pill toggle in the header.",
+      "html": "<div class=\"ds-lang\"><button class=\"ds-lang-btn\" aria-pressed=\"true\">NO</button><button class=\"ds-lang-btn\" aria-pressed=\"false\">EN</button></div>",
+      "css": ".ds-lang{display:inline-flex;border:2px solid #16213a;border-radius:999px;padding:2px}.ds-lang-btn{font:600 16px/1 Oswald,'Arial Narrow',sans-serif;letter-spacing:.08em;color:#16213a;background:transparent;border:0;border-radius:999px;min-width:44px;min-height:36px;cursor:pointer}.ds-lang-btn[aria-pressed=true]{background:#16213a;color:#f3ead7}.ds-lang-btn:focus-visible{outline:3px solid #1f3c88;outline-offset:3px}"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header link with a growing red underline.",
+      "html": "<a class=\"ds-nav\" href=\"#\">Priser</a>",
+      "css": ".ds-nav{font:600 18px/1.2 Oswald,'Arial Narrow',sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#16213a;padding:6px 0;background:linear-gradient(#b3262d,#b3262d) 0 100%/0 2px no-repeat;transition:background-size 220ms cubic-bezier(0.23,1,0.32,1)}.ds-nav:hover{background-size:100% 2px}.ds-nav:focus-visible{outline:3px solid #1f3c88;outline-offset:3px}"
+    },
+    {
+      "name": "Price Row",
+      "kind": "custom",
+      "refersTo": "card-menu",
+      "description": "One service and its price on the ink board, joined by a dotted leader.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-row\"><span class=\"ds-name\">Herreklipp</span><span class=\"ds-dots\"></span><span class=\"ds-price\">350 kr</span></div></div>",
+      "css": ".ds-board{background:#16213a;color:#f3ead7;padding:8px 20px;border:2px solid #b98a2f;outline:2px solid #b98a2f;outline-offset:5px;border-radius:6px;max-width:420px}.ds-row{display:flex;align-items:baseline;gap:12px;padding:18px 0}.ds-name{font:500 24px/1.2 Fraunces,Georgia,serif}.ds-dots{flex:1;min-width:16px;border-bottom:2px dotted rgba(217,183,101,.7);transform:translateY(-5px)}.ds-price{font:700 26px/1 Oswald,'Arial Narrow',sans-serif;letter-spacing:.04em;color:#d9b765;white-space:nowrap}"
+    },
+    {
+      "name": "Hours Ticket",
+      "kind": "card",
+      "refersTo": "card-ticket",
+      "description": "Opening hours as a stamped ticket.",
+      "html": "<dl class=\"ds-ticket\"><div class=\"ds-trow\"><dt>Mandag – fredag</dt><dd>10:00 – 18:00</dd></div><div class=\"ds-trow ds-closed\"><dt>Søndag</dt><dd>Stengt</dd></div></dl>",
+      "css": ".ds-ticket{margin:0;background:#e9dcc0;color:#16213a;border:2px solid #16213a;border-radius:10px;padding:8px 24px;box-shadow:8px 8px 0 #16213a;max-width:420px}.ds-trow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0}.ds-trow+.ds-trow{border-top:2px dashed rgba(22,33,58,.35)}.ds-ticket dt{font:600 20px/1.2 Oswald,'Arial Narrow',sans-serif;letter-spacing:.1em;text-transform:uppercase}.ds-ticket dd{margin:0;font:500 24px/1.2 Fraunces,Georgia,serif;white-space:nowrap}.ds-closed dd{color:#b3262d;font-style:italic}"
+    },
+    {
+      "name": "Barber Pole Sign",
+      "kind": "custom",
+      "refersTo": "sign",
+      "description": "The hanging sign: arched ink board, brass rule and spinning pole.",
+      "html": "<div class=\"ds-sign\"><span class=\"ds-est\">Siden 2024</span><span class=\"ds-pole\"></span><span class=\"ds-sname\">Torggata 15</span><span class=\"ds-ssub\">Skien</span></div>",
+      "css": ".ds-sign{display:flex;flex-direction:column;align-items:center;gap:4px;width:240px;padding:28px 20px 24px;background:#16213a;color:#f3ead7;border-radius:120px 120px 14px 14px;box-shadow:inset 0 0 0 6px #16213a,inset 0 0 0 8px #b98a2f}.ds-est{font:600 14px/1 Oswald,'Arial Narrow',sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#d9b765;margin-bottom:10px}.ds-pole{width:56px;height:140px;border-radius:12px;box-shadow:0 0 0 3px #b98a2f;background:repeating-linear-gradient(-45deg,#b3262d 0 16px,#f3ead7 16px 32px,#1f3c88 32px 48px,#f3ead7 48px 64px)}.ds-sname{font:italic 500 38px/1 Fraunces,Georgia,serif;margin-top:12px}.ds-ssub{font:600 18px/1 Oswald,'Arial Narrow',sans-serif;letter-spacing:.42em;padding-left:.42em;text-transform:uppercase}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Barber Sign on Torggata",
+    "overview": "The whole site behaves like the sign over the shop door: a dark enamel board with brass trim, a spinning red-and-blue pole, and a phone number you can read from across the street. It is warm and everyday rather than exclusive, and proud rather than apologetic.",
+    "keyCharacteristics": [
+      "Cream paper ground with ink-navy boards; pole red is the single action color.",
+      "Display serif for headlines; condensed uppercase labels for wayfinding.",
+      "Hard, offset shadows and doubled brass rules instead of soft blur shadows.",
+      "Pill buttons that physically press in (scale 0.97).",
+      "Motion limited to the pole spin, a short scroll-in and press feedback."
+    ],
+    "rules": [
+      {
+        "name": "The One Action Color Rule",
+        "body": "Pole red marks the way to call or visit and nothing else.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stripe Is Trim Rule",
+        "body": "Red and blue appear together only as pole stripes and the thin divider between hero and prices.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cream Is Paper Rule",
+        "body": "Keep the cream ground warm and slightly grainy; pure white is not part of this system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Roman Headline Rule",
+        "body": "Headlines are roman. Italic is reserved for the single accent word, the sign's 'Torggata 15' and the contact phone number.",
+        "section": "typography"
+      },
+      {
+        "name": "The Real Ø Rule",
+        "body": "Norwegian text must render æ, ø and å in the same face as its neighbours; check any label face with 'LØRDAG'.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hard Shadow Rule",
+        "body": "Shadows are offset and solid, in sign ink or deep red; a blurred shadow appears only under the hanging sign.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the phone number (46 15 91 57) and address one tap or one scroll away on every screen.",
+      "Do use pole red only for calling, visiting and the headline accent word.",
+      "Do keep shadows hard and offset (0 2px / 0 4px / 8px 8px / 0 8px) in ink or deep red.",
+      "Do keep motion short and purposeful: 160ms press, 520ms entrance, constant pole spin; respect prefers-reduced-motion.",
+      "Do check any new label or heading face against the word \"LØRDAG\" and the digits 0-9 before adopting it.",
+      "Do keep above-the-fold content independent of scroll: it enters on load, never behind a scroll observer.",
+      "Do use a cream focus ring on red and ink surfaces; the blue ring is for cream surfaces."
+    ],
+    "donts": [
+      "Don't use blurred drop shadows outside the hanging sign.",
+      "Don't use Barlow Condensed (wide Ø) or Bodoni Moda (hairlines vanish at small sizes); both were tried and removed.",
+      "Don't add photos, reviews, awards or prices that have not been confirmed; example prices and hours stay clearly replaceable.",
+      "Don't let the red-and-blue stripe become a large pattern or a card background.",
+      "Don't use pure white or pure black; stay with paper cream and sign ink."
+    ]
+  }
+}
