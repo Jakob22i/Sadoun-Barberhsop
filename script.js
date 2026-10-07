@@ -1,51 +1,50 @@
 (function () {
   var root = document.documentElement;
-  root.classList.add('js');
 
   var T = {
     nb: {
       'skip': 'Hopp til innhold',
       'nav.prices': 'Priser', 'nav.hours': 'Åpningstider', 'nav.contact': 'Finn oss',
       'call': 'Ring oss',
-      'hero.title1': 'Klassisk', 'hero.title2': 'barbering', 'hero.title3': 'i hjertet av Skien.',
-      'hero.lede': 'Skarpe klipp, rene linjer og et godt skjegg – gjort med tid og håndverk, midt i Torggata.',
-      'hero.cta': 'Ring for time', 'hero.cta2': 'Se priser', 'hero.est': 'Siden 2024', 'hero.walkin': 'Walk-in er velkommen · Menn og gutter',
-      'prices.eyebrow': 'Hva vi tilbyr', 'prices.title': 'Priser',
-      'prices.note': 'Priser kan variere – ring oss for å bekrefte.',
+      'hero.sub': 'Frisør i Skien',
+      'hero.voice': 'Ring eller kom innom. Vi tar deg imot så fort vi kan.',
+      'hero.cta': 'Ring nå', 'hero.cta2': 'Se priser',
+      'hero.walkin': 'Walk-in er velkommen · Menn og gutter',
+      'hero.est': 'Siden 2024',
+      'prices.title': 'Priser',
+      'prices.note': 'Eksempelpriser – ring for å bekrefte.',
       'svc.cut': 'Herreklipp', 'svc.fade': 'Fade / maskinklipp', 'svc.beard': 'Skjeggtrim',
       'svc.combo': 'Klipp + skjegg', 'svc.shave': 'Våtbarbering', 'svc.kids': 'Barneklipp',
-      'hours.eyebrow': 'Velkommen innom', 'hours.title': 'Åpningstider',
-      'hours.walkin': 'Ring eller kom innom – vi tar deg imot så fort vi kan.',
+      'hours.title': 'Åpningstider', 'hours.flag': 'eksempeltider',
       'day.weekdays': 'Mandag – fredag', 'day.sat': 'Lørdag', 'day.sun': 'Søndag', 'day.closed': 'Stengt',
-      'contact.eyebrow': 'Finn oss', 'contact.title': 'Torggata 15, Skien',
       'contact.call': 'Ring nå', 'contact.map': 'Vis i kart',
-      'callbar': 'Ring for time',
+      'callbar': 'Ring nå',
       'org': 'Org.nr.', 'aria.nav': 'Hovedmeny',
-      'meta.desc': 'Sadoun Barbershop i Torggata 15, Skien. Klassisk herreklipp, skjeggtrim og barbering. Ring 46 15 91 57.',
+      'meta.desc': 'Sadoun Barbershop i Torggata 15, Skien. Herreklipp, fade, skjegg og våtbarbering. Ring 46 15 91 57.',
       'meta.ogt': 'Sadoun Barbershop – Frisør i Skien',
-      'meta.ogd': 'Klassisk barbering i Torggata 15, Skien. Ring 46 15 91 57.'
+      'meta.ogd': 'Frisør i Torggata 15, Skien. Walk-in er velkommen. Ring 46 15 91 57.'
     },
     en: {
       'skip': 'Skip to content',
       'nav.prices': 'Prices', 'nav.hours': 'Opening hours', 'nav.contact': 'Find us',
       'call': 'Call us',
-      'hero.title1': 'Classic', 'hero.title2': 'barbering', 'hero.title3': 'in the heart of Skien.',
-      'hero.lede': 'Sharp cuts, clean lines and a well-kept beard – done with time and craft, right on Torggata.',
-      'hero.cta': 'Call to book', 'hero.cta2': 'See prices', 'hero.est': 'Since 2024', 'hero.walkin': 'Walk-ins welcome · Men and boys',
-      'prices.eyebrow': 'What we offer', 'prices.title': 'Prices',
-      'prices.note': 'Prices may vary – call us to confirm.',
+      'hero.sub': 'Barber in Skien',
+      'hero.voice': 'Call or drop in. We’ll see you as soon as we can.',
+      'hero.cta': 'Call now', 'hero.cta2': 'See prices',
+      'hero.walkin': 'Walk-ins welcome · Men and boys',
+      'hero.est': 'Since 2024',
+      'prices.title': 'Prices',
+      'prices.note': 'Example prices – call to confirm.',
       'svc.cut': 'Haircut', 'svc.fade': 'Fade / clipper cut', 'svc.beard': 'Beard trim',
       'svc.combo': 'Cut + beard', 'svc.shave': 'Wet shave', 'svc.kids': 'Kids’ cut',
-      'hours.eyebrow': 'Drop by', 'hours.title': 'Opening hours',
-      'hours.walkin': 'Call or walk in – we’ll see you as soon as we can.',
+      'hours.title': 'Opening hours', 'hours.flag': 'example hours',
       'day.weekdays': 'Monday – Friday', 'day.sat': 'Saturday', 'day.sun': 'Sunday', 'day.closed': 'Closed',
-      'contact.eyebrow': 'Find us', 'contact.title': 'Torggata 15, Skien',
       'contact.call': 'Call now', 'contact.map': 'Open in maps',
-      'callbar': 'Call to book',
+      'callbar': 'Call now',
       'org': 'Org. no.', 'aria.nav': 'Main menu',
-      'meta.desc': 'Sadoun Barbershop at Torggata 15, Skien. Classic men’s cuts, beard trims and shaves. Call 46 15 91 57.',
+      'meta.desc': 'Sadoun Barbershop at Torggata 15, Skien. Men’s cuts, fades, beard trims and wet shaves. Call 46 15 91 57.',
       'meta.ogt': 'Sadoun Barbershop – Barber in Skien',
-      'meta.ogd': 'Classic barbering at Torggata 15, Skien. Call 46 15 91 57.'
+      'meta.ogd': 'Barber at Torggata 15, Skien. Walk-ins welcome. Call 46 15 91 57.'
     }
   };
 
@@ -67,9 +66,7 @@
       if (m && dict[p[1]]) m.setAttribute('content', dict[p[1]]);
     });
     root.lang = lang === 'nb' ? 'nb' : 'en';
-    document.title = lang === 'nb'
-      ? 'Sadoun Barbershop – Frisør i Skien'
-      : 'Sadoun Barbershop – Barber in Skien';
+    document.title = dict['meta.ogt'];
     buttons.forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
     });
@@ -87,36 +84,42 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Fast ring-linje (mobil): skjules mens hero-knappen eller kontaktflaten er synlig
+  if (!('IntersectionObserver' in window)) {
+    // Uten observatør: ring-linjen vises alltid, stolpen går alltid.
+    var cb = document.getElementById('callbar');
+    if (cb) cb.classList.add('is-shown');
+    return;
+  }
+
+  // Fast ring-linje: vises når hero-knappen og knappene i kontaktflaten er ute av syn
   var callbar = document.getElementById('callbar');
   var heroCta = document.querySelector('.hero__cta');
-  var contact = document.getElementById('kontakt');
-  if (callbar && heroCta && contact && 'IntersectionObserver' in window) {
+  var contact = document.querySelector('.contact__cta');
+  if (callbar && heroCta && contact) {
     var seen = { cta: false, contact: false };
     var setBar = function () {
-      var hide = seen.cta || seen.contact;
-      callbar.classList.toggle('is-hidden', hide);
-      if (hide) { callbar.setAttribute('tabindex', '-1'); callbar.setAttribute('aria-hidden', 'true'); }
-      else { callbar.removeAttribute('tabindex'); callbar.removeAttribute('aria-hidden'); }
+      var show = !seen.cta && !seen.contact;
+      callbar.classList.toggle('is-shown', show);
+      if (show) { callbar.removeAttribute('tabindex'); callbar.removeAttribute('aria-hidden'); }
+      else { callbar.setAttribute('tabindex', '-1'); callbar.setAttribute('aria-hidden', 'true'); }
     };
+    callbar.setAttribute('tabindex', '-1'); callbar.setAttribute('aria-hidden', 'true');
     var barIo = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { seen[e.target === heroCta ? 'cta' : 'contact'] = e.isIntersecting; });
+      entries.forEach(function (e) {
+        // Hero-knappen regnes som synlig når mesteparten er i bildet
+        seen[e.target === heroCta ? 'cta' : 'contact'] = e.target === heroCta ? e.intersectionRatio >= 0.6 : e.isIntersecting;
+      });
       setBar();
-    });
+    }, { threshold: [0, 0.25, 0.6, 1] });
     barIo.observe(heroCta);
     barIo.observe(contact);
   }
 
-  // Innkomst ved scroll
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px', threshold: 0.05 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('is-in'); });
+  // Stolpen står stille når den er utenfor syn
+  var pole = document.querySelector('.pole');
+  if (pole) {
+    new IntersectionObserver(function (entries) {
+      pole.classList.toggle('is-paused', !entries[0].isIntersecting);
+    }).observe(pole);
   }
 })();
